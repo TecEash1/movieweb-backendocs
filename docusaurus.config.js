@@ -23,7 +23,8 @@ const config = {
   organizationName: 'teceash1', // Usually your GitHub org/user name.
   projectName: 'movieweb-backendocs', // Usually your repo name.
   deploymentBranch: 'main',
-
+  trailingSlash: false,
+  
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
