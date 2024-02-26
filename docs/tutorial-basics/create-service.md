@@ -5,6 +5,7 @@ sidebar_position: 2
 # Creating the Service
 
 The next step is to create the service and deploy it.
+> *This section contains 9 steps*
 
 
 #### 1. Modify the ``Container image URL`` to be:
@@ -27,8 +28,8 @@ The next step is to create the service and deploy it.
 
 #### 6. Scroll Down and Select ``Add Health Check``. Copy the same format as below:
 > ![health-check](image-9.png)
-#### 6. Select Variables and Secrests (It is located slightly below the Port section)
-#### 7. Add following necessary variables:
+#### 7. Select Variables and Secrests (It is located slightly below the Port section)
+#### 8. Add following necessary variables:
 | Name    | Value |
 | -------- | ------- |
 | MWB_POSTGRES__CONNECTION   | DATABASE URL HERE    |
@@ -37,8 +38,26 @@ The next step is to create the service and deploy it.
 | MWB_POSTGRES__SSL | true |
 | MWB_POSTGRES__MIGRATE_ON_BOOT | true |
 | MIKRO_ORM_MIGRATIONS_DISABLE_FOREIGN_KEYS | false |
+
+#### Additional variables are needed, please **pick only one of these**: 
+
+**``MWB_SERVER__ALLOW_ANY_SITE``** - Allows **any Movie Web instance** to access your backend
+> e.g. true
+
+**``MVB_SERVER_CORS``** - Allows only **specific sites** to access your backend. Paste your site in here and add any additional ones that you may want to whitelist by seperating the links by a space.
+> e.g. ``https://movie-web.app https://testing.movie-web.app``
+
+| Name    | Value |
+| -------- | ------- |
 | MWB_SERVER__ALLOW_ANY_SITE | true | 
+| MVB_SERVER_CORS | WHITELISTED URLS HERE |
 
 - The ``MWB_POSTGRES__CONNECTION`` is your prostgresql database link. If you created one earlier on vercel, insert that there.
 
-#### 8. Select Create!
+:::note
+
+**More info on configurable environmental variables can be found at the [official Movie Web docs](https://movie-web.github.io/docs/backend/configuration#method-3-environment)**.
+
+:::
+
+#### 9. Select Create!
