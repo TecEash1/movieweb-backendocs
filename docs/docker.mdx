@@ -19,11 +19,11 @@ If you do not want to use the current Docker Image which has been used in the tu
 ## Creating the image
 
 
-#### 2. Open Docker Desktop and the terminal in the Movie Web Backend root directory
-#### 3. Run:
+#### 1. Open Docker Desktop and the terminal in the Movie Web Backend root directory
+#### 2. Run:
 
 ```terminal
-docker build -t docker build -t YOURUSERNAME/backend-movieweb:latest .
+docker build -t YOURUSERNAME/backend-movieweb:latest .
 ```
 
 - ``your-username`` should be replaced with your docker username
@@ -33,12 +33,12 @@ It should now appear in your ``images`` section of the docker desktop app:
 ![images](./images.png)
 *(Your created date will be ``just now``)*
 
-#### 4. Push Build
+#### 3. Push Build
 
 The next step is to push your docker build. Select the 3 dots next to your image. And select ``Push to Hub``:
 > ![Hub](./hub.png)
 
-#### 5. Get the link
+#### 4. Get the link
 You should now see a new [repository](https://hub.docker.com/repositories).
 
 Select your Movie Web Backend repository and scroll down to the ``Tags`` Section. 
