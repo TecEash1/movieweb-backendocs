@@ -42,7 +42,7 @@ The next step is to create the service and deploy it.
 #### Additional variables are needed, please **pick only one of these**: 
 
 **``MWB_SERVER__ALLOW_ANY_SITE``** - Allows **any Movie Web instance** to access your backend
-> e.g. true
+> e.g. ``true``
 
 **``MVB_SERVER_CORS``** - Allows only **specific sites** to access your backend. Paste your site in here and add any additional ones that you may want to whitelist by seperating the links by a space.
 > e.g. ``https://movie-web.app https://testing.movie-web.app``
